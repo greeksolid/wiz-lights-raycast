@@ -1,0 +1,79 @@
+{
+  "name": "wiz-lights",
+  "title": "WiZ Lights Raycast Extension",
+  "description": "Control your WiZ smart lights — turn on, off, toggle, and adjust brightness",
+  "icon": "command-icon.png",
+  "author": "tasos",
+  "categories": [
+    "Applications"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "turn-off-lights",
+      "title": "Turn Off Lights",
+      "subtitle": "WiZ",
+      "description": "Turn off all WiZ lights on your network",
+      "mode": "no-view"
+    },
+    {
+      "name": "turn-on-lights",
+      "title": "Turn On Lights",
+      "subtitle": "WiZ",
+      "description": "Turn on all WiZ lights on your network",
+      "mode": "no-view"
+    },
+    {
+      "name": "toggle-lights",
+      "title": "Toggle Lights",
+      "subtitle": "WiZ",
+      "description": "Toggle all WiZ lights on your network",
+      "mode": "no-view"
+    },
+    {
+      "name": "manage-lights",
+      "title": "Manage Lights",
+      "subtitle": "WiZ",
+      "description": "View and control individual WiZ lights",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "broadcastAddress",
+      "title": "Broadcast Address",
+      "description": "Your network broadcast address (e.g. 192.168.1.255)",
+      "type": "textfield",
+      "default": "192.168.1.255",
+      "required": false
+    },
+    {
+      "name": "discoveryTimeout",
+      "title": "Discovery Timeout (ms)",
+      "description": "How long to wait for lights to respond",
+      "type": "textfield",
+      "default": "1500",
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"Error: no publish\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
